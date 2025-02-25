@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "This is Kiệt",
+  title: "Hi, I'm Kiệt",
   description: "Developer Portfolio Site by xuankiet",
 };
 

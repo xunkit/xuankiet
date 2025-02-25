@@ -6,6 +6,10 @@ interface BoxProps {
   children: React.ReactNode;
 }
 
+const SkeletonBox = () => {
+  return <div className="p-4 family-mono box">--</div>;
+};
+
 const Box = ({ children }: BoxProps) => {
   return <div className="p-4 family-mono box">{children}</div>;
 };
@@ -34,11 +38,20 @@ function Clock() {
     };
   }, []);
 
+  if (time)
+    return (
+      <div className="styled-text text-5xl xl:text-8xl tracking-tighter flex gap-8">
+        <Box>{hour}</Box>
+        <Box>{minute}</Box>
+        <Box>{second}</Box>
+      </div>
+    );
+
   return (
     <div className="styled-text text-5xl xl:text-8xl tracking-tighter flex gap-8">
-      <Box>{hour}</Box>
-      <Box>{minute}</Box>
-      <Box>{second}</Box>
+      <SkeletonBox />
+      <SkeletonBox />
+      <SkeletonBox />
     </div>
   );
 }
