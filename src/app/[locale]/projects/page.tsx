@@ -1,7 +1,8 @@
 import React from "react";
-import { MyProjects } from "@/constants";
+import { ProjectNameList } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface ProjectBoxProps {
   name: string;
@@ -47,20 +48,23 @@ const ProjectBox = ({
 };
 
 const Projects = () => {
+  const projectList = ProjectNameList;
+  const t = useTranslations("Projects");
+
   return (
     <main className="flex flex-col gap-12 py-8">
       <h2 className="styled-text text-6xl tracking-tighter text-center">
         My Projects
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 lg-px-0">
-        {MyProjects.map((project) => (
+        {projectList.map((project) => (
           <ProjectBox
-            key={project.name}
-            name={project.name}
-            description={project.description}
-            techStack={project.techStack}
-            siteHref={project.siteHref}
-            imageSrc={project.imageSrc}
+            key={project}
+            name={project}
+            description={t(`${project}.description`)}
+            techStack={t(`${project}.techStack`)}
+            siteHref={t(`${project}.siteHref`)}
+            imageSrc={t(`${project}.imageSrc`)}
           />
         ))}
       </div>

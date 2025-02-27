@@ -1,0 +1,27 @@
+{
+  "Metadata": {
+    "title": "Hi, I'm Kiệt",
+    "description": "Developer Portfolio Site by xuankiet"
+  },
+  "Page-Home": {
+    "bio": "便利なものを作るのが好きなWEB開発者です。",
+    "hobby": "NJZが好きです! (NewJeans)",
+    "timeLabel": "現地時間",
+    "languageLabel": "話せる言語:"
+  },
+  "Projects": {
+    "DailyTodo": {
+      "description": "ToDoをシンプルに管理する方法。",
+      "techStack": "Next.js, AWS Dynamo, Auth.js, Gemini API, Tailwind CSS",
+      "siteHref": "https://dailytodo.xuankiet.com",
+      "imageSrc": "/dailytodo-banner.png"
+    },
+
+    "Gemini Chat App": {
+      "description": "GoogleのGeminiとチャットする別の方法！",
+      "techStack": "Next.js, Gemini API, Radix UI",
+      "siteHref": "https://gemini-chat-ui.vercel.app",
+      "imageSrc": "/geminichatui-banner.png"
+    }
+  }
+}
