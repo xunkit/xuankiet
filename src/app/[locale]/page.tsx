@@ -26,7 +26,7 @@ export default function Home() {
             width={150}
             alt="Newjeans Murakami Flower"
           />
-          <p>{t("hobby")}</p>
+          <p className="text-center">{t("hobby")}</p>
         </div>
         <div className="homepage-grid-time flex flex-col gap-4">
           <p>{t("timeLabel")}</p>
